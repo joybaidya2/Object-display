@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Display</title>
+</head>
+<body>
+    <h2 id="text"></h2>
+    <h1 id="array"></h1>
+    <script>
+        //Display Loop object..
+        const perosn = {
+            name : "Joy",
+            age : 23,
+            dept : "CSE"
+        };
+        // Build text 
+        let text = "";
+        for(let x in perosn){
+            text = text + perosn[x] + " ";
+        };
+        document.getElementById("text").innerHTML = text;
+
+        // Display array object..
+        const cars = {
+            car1 : "BMW-X5",
+            car2 : "Rolls-Royce",
+            car3 : "Range Rover"
+        };
+        const myArray = Object.values(cars);
+        document.getElementById("array").innerHTML = "The all cars name is : "+ myArray;
+
+    </script>
+</body>
+</html>
